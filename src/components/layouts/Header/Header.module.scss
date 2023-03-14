@@ -1,0 +1,19 @@
+@use '@/styles/functions' as func;
+@use '@/styles/mixins';
+@use '@/styles/colors' as c;
+@use '@/styles/fonts' as f;
+@use '@/styles/variables' as v;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: v.$headerZIndex;
+  padding: func.toRespPx(24px);
+  width: 100%;
+  &Logo {
+    @include mixins.toRespSize(400px, 62.25px);
+  }
+
+  background-color: rgba($color: white, $alpha: 0);
+}

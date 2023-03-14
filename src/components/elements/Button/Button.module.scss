@@ -1,0 +1,20 @@
+@use '@/styles/functions' as func;
+@use '@/styles/mixins';
+@use '@/styles/colors' as c;
+@use '@/styles/fonts' as f;
+
+.button {
+  @include mixins.toRespSize(520px, 96px);
+  @include f.tsukushiARoundGothicB(28px);
+  color: c.$mainColor;
+  border: func.toRespPx(2px) solid c.$mainColor;
+  border-radius: func.toRespPx(350px);
+  background: none;
+  cursor: pointer;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);;
+
+  &:hover {
+    background-color: c.$mainColor;
+    color: white;
+  }
+}

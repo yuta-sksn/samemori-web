@@ -1,0 +1,28 @@
+@use '@/styles/functions' as func;
+@use '@/styles/mixins';
+@use '@/styles/colors' as c;
+@use '@/styles/fonts' as f;
+@use '@/styles/variables' as v;
+
+.pageSection {
+  width: 100%;
+
+  &Contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: func.toRespPx(86px) func.toRespPx(64px);
+    width: 100%;
+    max-width: 1024px;
+  }
+
+  &.white {
+    background-color: white;
+  }
+
+  &.aliceblue {
+    background-color: #f0f9fe;
+  }
+}

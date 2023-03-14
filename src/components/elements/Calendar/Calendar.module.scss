@@ -1,0 +1,22 @@
+@use '@/styles/functions' as func;
+@use '@/styles/mixins';
+@use '@/styles/colors' as c;
+@use '@/styles/fonts' as f;
+@use '@/styles/variables' as v;
+
+.calendar {
+  margin-top: func.toRespPx(40px);
+  > iframe {
+    @include mixins.toRespSize(640px, 640px);
+  }
+}
+
+@media (min-width: 769px) {
+  .calendar {
+    width: 100%;
+    max-width: 1024px;
+    > iframe {
+      width: 100%;
+    }
+  }
+}

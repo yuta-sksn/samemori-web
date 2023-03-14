@@ -1,0 +1,105 @@
+@use '@/styles/functions' as func;
+@use '@/styles/mixins';
+@use '@/styles/colors' as c;
+@use '@/styles/fonts' as f;
+@use '@/styles/variables' as v;
+
+.footer {
+  padding: func.toRespPx(48px) func.toRespPx(64px) func.toRespPx(69px);
+  width: 100%;
+  background-color: c.$mainColor;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+
+  &ContentsContainer {
+    margin: 0 auto;
+    width: func.toRespPx(640px);
+  }
+
+  &Logo {
+    @include mixins.toRespSize(400px, 62.25px);
+  }
+
+  &Links {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: func.toRespPx(24px) 0;
+    @include f.tsukushiARoundGothicB(24px);
+
+    &List {
+      list-style: none;
+
+      > li {
+        margin-bottom: func.toRespPx(10px);
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        > a {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    > hr {
+      margin: 0 func.toRespPx(48px) 0 func.toRespPx(64px);
+      @include mixins.toRespSize(1px, 100px);
+      border: none;
+      background-color: white;
+    }
+
+    &Sns {
+      text-align: center;
+
+      > p {
+        margin-bottom: func.toRespPx(10px);
+      }
+
+      &List {
+        display: flex;
+        align-items: center;
+        gap: 0 func.toRespPx(32px);
+        list-style: none;
+      }
+
+      // Facebook
+      &Fb {
+        display: inline-block;
+        @include mixins.toRespSize(57.29px, 58.06px);
+
+        > img {
+          width: inherit;
+        }
+      }
+
+      &Insta {
+        display: inline-block;
+        @include mixins.toRespSize(53.33px, 54.19px);
+
+        > img {
+          width: inherit;
+        }
+      }
+    }
+  }
+
+  &Copyright {
+    width: 100%;
+    @include f.defaultW4(18px);
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .footer {
+    &ContentsContainer {
+      width: func.toRespPx(594px);
+    }
+
+    &Logo {
+      display: block;
+      margin: 0 auto;
+      @include mixins.toRespSize(400px, 62.25px);
+    }
+  }
+}

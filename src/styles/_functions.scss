@@ -1,0 +1,6 @@
+@use './variables' as v;
+
+@function toRespPx($size, $min: v.$minSize) {
+  // 指定したサイズを最大値とし、画面幅に応じてサイズを変化させる。
+  @return clamp($min, calc($size * calc(100vw / v.$referenceWidth)), $size);
+}

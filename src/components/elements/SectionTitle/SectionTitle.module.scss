@@ -1,0 +1,30 @@
+@use '@/styles/functions' as func;
+@use '@/styles/mixins';
+@use '@/styles/colors' as c;
+@use '@/styles/fonts' as f;
+@use '@/styles/variables' as v;
+
+.sectionTitle {
+  width: 100%;
+  max-width: v.$componentMaxWidth;
+  background: none;
+  color: c.$mainColor;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+
+  > h2 {
+    line-height: 1.5em;
+    @include f.tsukushiARoundGothicB(42px);
+  }
+
+  > hr {
+    background-color: c.$mainColor;
+    @include mixins.toRespSize(500px, 1.5px);
+    border: none;
+  }
+
+  > p {
+    margin-top: func.toRespPx(2px);
+    @include f.tsukushiARoundGothicB(18px);
+    text-indent: 0.5em;
+  }
+}

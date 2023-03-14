@@ -1,0 +1,69 @@
+@use '@/styles/functions' as func;
+@use '@/styles/mixins';
+@use '@/styles/colors' as c;
+@use '@/styles/fonts' as f;
+@use '@/styles/variables' as v;
+
+.mainVisual {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('/images/mv-01.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+
+  &ImgCover {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: inherit;
+    min-height: inherit;
+    background-color: rgba($color: #00499F, $alpha: 0.32);
+  }
+
+  &Contents {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &Catch {
+    margin-bottom: func.toRespPx(56px);
+    @include f.tsukushiARoundGothicB(48px);
+    text-align: center;
+
+    > span {
+      text-shadow: 0px func.toRespPx(4px)
+        func.toRespPx(4px)
+        rgba($color: #000000, $alpha: 0.25);
+    }
+  }
+
+  &Logo {
+    margin: 0 auto;
+    width: func.toRespPx(300px);
+    filter: drop-shadow(
+      0px,
+      0px,
+      func.toRespPx(32px),
+      rgba($color: #000000, $alpha: 0.75)
+    );
+
+    > img {
+      vertical-align: top;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .mainVisual {
+    &Contents {
+      transform: translate(-50%, -46%);
+    }
+  }
+}

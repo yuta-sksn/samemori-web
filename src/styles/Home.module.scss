@@ -1,0 +1,27 @@
+@use '@/styles/functions' as func;
+@use '@/styles/fonts' as f;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+
+  .index {
+    &AboutUs {
+      &Catch {
+        margin-bottom: func.toRespPx(24px);
+        color: #333;
+        @include f.tsukushiARoundGothicB(42px);
+      }
+
+      &Description {
+        margin-bottom: func.toRespPx(78px);
+        color: #333;
+        @include f.defaultW4(26px);
+      }
+    }
+  }
+}

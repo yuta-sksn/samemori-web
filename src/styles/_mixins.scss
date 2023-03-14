@@ -1,0 +1,28 @@
+@use './functions' as func;
+@use './variables' as v;
+
+// Element size (width/height 両方で使用可)
+@mixin toRespSize(
+  $width: $referenceWidth,
+  $height: 530px,
+  $isWidthPxDesignation: true,
+  $isHeightPxDesignation: true,
+  $minWidth: v.$minSize,
+  $minHeight: v.$minSize
+) {
+  @if $isWidthPxDesignation {
+    // 指定した width を最大値とし、画面幅に応じて width を変化させる。デフォルト最小値は 1px
+    width: func.toRespPx($width, $minWidth);
+  } @else {
+    // 別途 % や vw を指定した場合
+    width: $width;
+  }
+
+  @if $isHeightPxDesignation {
+    // 指定した height を最大値とし、画面幅に応じて height を変化させる。デフォルト最小値は 1px
+    height: func.toRespPx($height, $minHeight);
+  } @else {
+    // px 指定以外
+    height: $height;
+  }
+}
