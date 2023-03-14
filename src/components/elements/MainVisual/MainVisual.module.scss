@@ -35,10 +35,12 @@
   &Catch {
     margin-bottom: func.toRespPx(56px);
     @include f.tsukushiARoundGothicB(48px);
+    color: white;
     text-align: center;
 
     > span {
-      text-shadow: 0px func.toRespPx(4px)
+      text-shadow: 0px
+        func.toRespPx(4px)
         func.toRespPx(4px)
         rgba($color: #000000, $alpha: 0.25);
     }
