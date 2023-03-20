@@ -7,7 +7,7 @@
 .calendar {
   margin-top: func.toRespPx(40px);
   > iframe {
-    @include mixins.toRespSize(640px, 640px);
+    @include mixins.toRespSize(640px, 720px);
   }
 }
 
@@ -17,6 +17,22 @@
     max-width: 1024px;
     > iframe {
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar {
+    > iframe {
+      @include mixins.toRespSize(640px, 1000px);
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .calendar {
+    > iframe {
+      @include mixins.toRespSize(680px, 1000px);
     }
   }
 }

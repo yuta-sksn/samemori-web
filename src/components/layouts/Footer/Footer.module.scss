@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     gap: 0;
-    margin: func.toRespPx(24px) 0;
+    margin: func.toRespPx(24px) 0 func.toRespPx(32px);
     @include f.tsukushiARoundGothicB(24px);
 
     &List {
@@ -36,6 +36,7 @@
           margin-bottom: 0;
         }
         > a {
+          color: white;
           text-decoration: underline;
         }
       }
@@ -53,6 +54,7 @@
 
       > p {
         margin-bottom: func.toRespPx(10px);
+        color: white;
       }
 
       &List {
@@ -81,11 +83,19 @@
         }
       }
     }
+
+    a {
+      transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+      &:hover {
+        opacity: 0.75;
+      }
+    }
   }
 
   &Copyright {
     width: 100%;
     @include f.defaultW4(18px);
+    color: white;
     text-align: center;
   }
 }

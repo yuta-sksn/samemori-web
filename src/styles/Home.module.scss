@@ -1,4 +1,5 @@
 @use '@/styles/functions' as func;
+@use '@/styles/colors' as c;
 @use '@/styles/fonts' as f;
 
 .main {
@@ -12,9 +13,11 @@
   .index {
     &AboutUs {
       &Catch {
-        margin-bottom: func.toRespPx(24px);
+        margin-bottom: func.toRespPx(32px);
         color: #333;
         @include f.tsukushiARoundGothicB(42px);
+        line-height: 1.3em;
+        background:linear-gradient(transparent 70%, c.$mainThinColor 60%);
       }
 
       &Description {

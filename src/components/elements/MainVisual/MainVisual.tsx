@@ -17,7 +17,7 @@ export const MainVisual = ({}: MainVisualProps) => {
         </h2>
         <div className={classes.mainVisualLogo}>
           <Image
-            src="/images/logo-icon-white.png"
+            src="/images/logo-icon-color.png"
             alt="勝手に鮫町盛り上げ隊"
             width={300}
             height={300}
