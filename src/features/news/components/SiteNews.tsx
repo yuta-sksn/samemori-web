@@ -1,10 +1,8 @@
-// import { AchievementContentsList } from '@/components/elements/AchievementContentsList/AchievementContentsList';
-import { CardList } from '@/components/elements/CardList/CardList';
+import React from 'react';
 import useSyncSiteNewsList from '@/features/news/api/useSyncSiteNewsList';
-import { News } from '@/features/news/types';
-// import classes from './SiteNews.module.scss';
 import { isErrorModalObj, swrErrorHandlingInComponent } from '@/utils/error';
-import { Content } from '../types/content';
+import { Content } from '@/features/news/types/content';
+import { CardList } from '@/components/elements/CardList/CardList';
 
 interface SiteNewsProps {
   limit?: number;
@@ -26,7 +24,6 @@ export const SiteNews = ({
   const { data, error, isLoading } = useSyncSiteNewsList(dataLimit, dataOffset)
   const errorHandling = swrErrorHandlingInComponent(error);
   if (errorHandling !== null && !isErrorModalObj(errorHandling)) return errorHandling;
-  console.log(data)
 
   return (
     <>
@@ -39,7 +36,7 @@ export const SiteNews = ({
       </div>
       {/* エラーモーダル */}
       {(() => {
-        // errorHandling が rrorModalObj ならエラーモーダルを表示
+        // errorHandling が ErrorModalObj ならエラーモーダルを表示
         if (isErrorModalObj(errorHandling)) {
           return <></>;
         }
