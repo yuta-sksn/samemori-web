@@ -83,6 +83,13 @@
         }
       }
     }
+
+    a {
+      transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+      &:hover {
+        opacity: 0.75;
+      }
+    }
   }
 
   &Copyright {
