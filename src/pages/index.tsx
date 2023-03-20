@@ -41,8 +41,10 @@ export default function Home() {
         <MainVisual />
         {/*　勝手に鮫町盛り上げ隊について */}
         <PageSection>
-          <h2 className={styles.indexAboutUsCatch}>キャッチコピーテキストテキストテキスト</h2>
-          <p className={styles.indexAboutUsDescription}>勝手に鮫町盛り上げ隊は…テキストテキストテキスト<br />テキストテキスト<br />テキストテキスト、簡単な説明</p>
+          <h2 className={styles.indexAboutUsCatch}>鮫町の魅力を活かし、盛り上げる</h2>
+          <p className={styles.indexAboutUsDescription}>
+            勝手に鮫町盛り上げ隊は…テキストテキストテキスト<br />テキストテキスト<br />テキストテキスト、簡単な説明
+          </p>
           <Button label="勝手に鮫町盛り上げ隊について" />
         </PageSection>
         {/* お知らせ・イベント */}
