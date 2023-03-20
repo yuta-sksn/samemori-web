@@ -11,6 +11,7 @@ import { useState, useEffect } from 'react'
 import { AdobeFontScript } from '@/features/adobefont/components/AdobeFontScript'
 import { Card } from '@/components/elements/Card/Card'
 import { SiteNews } from '@/features/news/components/SiteNews'
+import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,6 +29,18 @@ export default function Home() {
     window.addEventListener('scroll', toggleHeaderBlue)
     return () => window.removeEventListener('scroll', toggleHeaderBlue)
   }, [])
+
+  const router = useRouter()
+
+  const onClickGotoAbout = (e: any) => {
+    e.preventDefault()
+    router.push('/about')
+  }
+
+  const onClickGotoNews = (e: any) => {
+    e.preventDefault()
+    router.push('/news')
+  }
 
   return (
     <>
@@ -47,7 +60,7 @@ export default function Home() {
           <p className={styles.indexAboutUsDescription}>
             勝手に鮫町盛り上げ隊は…テキストテキストテキスト<br />テキストテキスト<br />テキストテキスト、簡単な説明
           </p>
-          <Button label="勝手に鮫町盛り上げ隊について" />
+          <Button label="勝手に鮫町盛り上げ隊について" onClick={onClickGotoAbout} />
         </PageSection>
         {/* お知らせ・イベント */}
         <PageSection
@@ -56,7 +69,7 @@ export default function Home() {
           sectionTitleDescription="News & Events"
         >
           <SiteNews limit={3} noPagination={true} />
-          <Button label="お知らせ・イベント一覧をみる" />
+          <Button label="お知らせ・イベント一覧をみる" onClick={onClickGotoNews} />
         </PageSection>
         <PageSection
           sectionTitle="イベントカレンダー"
