@@ -9,6 +9,8 @@ import { MainVisual } from '@/components/elements/MainVisual/MainVisual'
 import { PageSection } from '@/components/layouts/PageSection/PageSection'
 import { useState, useEffect } from 'react'
 import { AdobeFontScript } from '@/features/adobefont/components/AdobeFontScript'
+import { Card } from '@/components/elements/Card/Card'
+import { SiteNews } from '@/features/news/components/SiteNews'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -53,10 +55,7 @@ export default function Home() {
           sectionTitle="お知らせ・イベント"
           sectionTitleDescription="News & Events"
         >
-          <div>aaaaa</div>
-          <div>aaaaa</div>
-          <div>aaaaa</div>
-          <div>aaaaa</div>
+          <SiteNews limit={3} noPagination={true} />
           <Button label="お知らせ・イベント一覧をみる" />
         </PageSection>
         <PageSection
