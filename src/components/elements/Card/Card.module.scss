@@ -10,9 +10,14 @@
   @include mixins.toRespSize(640px, 218px);
   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
   background-color: white;
-  box-shadow: 0px 4px 4px 0px rgba($color: #000000, $alpha: 0.25);
+  box-shadow: func.toRespPx(2px) func.toRespPx(4px) func.toRespPx(4px) 0px rgba($color: #000000, $alpha: 0.25);
   border-radius: func.toRespPx(4px);
   cursor: pointer;
+
+  &:hover {
+    box-shadow: func.toRespPx(4px) func.toRespPx(8px) func.toRespPx(12px) 0px rgba($color: #000000, $alpha: 0.185);
+    transform: translate(0, calc(0px - func.toRespPx(2px))) scale(1.005);
+  }
 
   &Thumbnail {
     display: block;
@@ -50,7 +55,7 @@
       > span {
         display: inline-block;
         margin-right: func.toRespPx(8px);
-        padding: func.toRespPx(3px) func.toRespPx(8px) func.toRespPx(2px);
+        padding: func.toRespPx(3px) func.toRespPx(8px) func.toRespPx(3.5px);
         &:first-of-type {
           @include f.tsukushiARoundGothicB(15px);
           margin-right: func.toRespPx(2px);
@@ -68,7 +73,14 @@
         }
 
         &.cardTitleBeforeType {
-          background-color: #94C0EA;
+
+          &.news {
+            background-color: #94C0EA;
+          }
+
+          &.event {
+            background-color: #94E4CA;
+          }
         }
       }
     }
