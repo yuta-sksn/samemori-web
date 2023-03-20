@@ -1,0 +1,8 @@
+@use '@/styles/functions' as func;
+
+.cardList {
+  display:flex;
+  flex-flow: column;
+  gap: func.toRespPx(40px) 0;
+  padding: func.toRespPx(40px) 0 func.toRespPx(80px);
+}
