@@ -10,9 +10,10 @@
   min-height: 100vh;
   background-color: white;
 
-  &.news {
+  &.news,
+  &.newsId {
     min-height: auto;
-    padding-top: func.toRespPx(42px);
+    padding-top: func.toRespPx(32px);
     background: #f0f9fe;
   }
 
