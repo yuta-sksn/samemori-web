@@ -10,6 +10,12 @@
   min-height: 100vh;
   background-color: white;
 
+  &.news {
+    min-height: auto;
+    padding-top: func.toRespPx(42px);
+    background: #f0f9fe;
+  }
+
   .index {
     &AboutUs {
       &Catch {
@@ -17,7 +23,7 @@
         color: #333;
         @include f.tsukushiARoundGothicB(42px);
         line-height: 1.3em;
-        background:linear-gradient(transparent 70%, c.$mainThinColor 60%);
+        background: linear-gradient(transparent 70%, c.$mainThinColor 60%);
       }
 
       &Description {
