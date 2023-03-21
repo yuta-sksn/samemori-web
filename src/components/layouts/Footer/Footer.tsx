@@ -28,8 +28,8 @@ export const Footer = ({}: FooterProps) => {
         <div className={useClassName(['fs-18px', classes.footerLinks])}>
             {/* 内部・外部リンク */}
             <ul className={classes.footerLinksList}>
-              <li><Link href="/about">勝手に鮫町盛り上げ隊について</Link></li>
-              <li><Link href="/news">お知らせ・イベント</Link></li>
+              <li><Link href="/about" scroll={false}>勝手に鮫町盛り上げ隊について</Link></li>
+              <li><Link href="/news" scroll={false}>お知らせ・イベント</Link></li>
               <li><a href="">お問い合わせ</a></li> 
             </ul>
             <hr />

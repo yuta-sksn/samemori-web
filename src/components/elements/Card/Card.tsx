@@ -50,7 +50,7 @@ export const Card = ({
   }
 
   return (
-    <Link className={classes.card} href={`/news/${id}`}>
+    <Link className={classes.card} href={`/news/${id}`} scroll={false}>
       <div className={classes.cardThumbnail} data-emoji={dataEmoji}>
         <Image
           src={imageSrc}

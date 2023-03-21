@@ -15,7 +15,7 @@ export const Header = ({
   return (
     <header className={classes.header}>
       <h1 className={classes.headerLogo}>
-        <Link href="/">
+        <Link href="/" scroll={false}>
           <Image
             src={`/images/logo-landscape-${componentVariant}.png`}
             alt="勝手に鮫町盛り上げ隊"
