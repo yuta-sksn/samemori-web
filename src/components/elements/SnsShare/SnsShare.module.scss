@@ -1,0 +1,44 @@
+@use '@/styles/functions' as func;
+@use '@/styles/mixins';
+@use '@/styles/colors' as c;
+@use '@/styles/fonts' as f;
+
+.snsShare {
+  > h3 {
+    margin-bottom: func.toRespPx(24px);
+    width: 100%;
+    max-width: 1024px;
+    @include f.tsukushiARoundGothicB(32px);
+    color: c.$mainColor;
+    text-align: center;
+  }
+
+  > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 func.toRespPx(32px);
+    list-style: none;
+  }
+
+  // Line, Twitter
+  &Line,
+  &Twitter {
+    display: inline-block;
+    @include mixins.toRespSize(54.19px, 55.12px);
+
+    > img {
+      width: inherit;
+    }
+  }
+
+  // Facebook
+  &Fb {
+    display: inline-block;
+    @include mixins.toRespSize(57.29px, 58.06px);
+
+    > img {
+      width: inherit;
+    }
+  }
+}
