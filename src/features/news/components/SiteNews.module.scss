@@ -1,0 +1,18 @@
+@use '@/styles/functions' as func;
+@use '@/styles/mixins';
+@use '@/styles/colors' as c;
+@use '@/styles/fonts' as f;
+
+.customPagination {
+  > ul {
+    justify-content: center;
+    > li {
+      > button {
+        @include mixins.toRespSize(60px, 60px);
+        @include f.tsukushiARoundGothicB(28px);
+        color: c.$mainColor;
+        border-radius: 50%;
+      }
+    }
+  }
+}
