@@ -10,6 +10,7 @@
   min-height: 100vh;
   background-color: white;
 
+  &.about,
   &.news,
   &.newsId {
     min-height: auto;
@@ -31,6 +32,20 @@
         margin-bottom: func.toRespPx(78px);
         color: #333;
         @include f.defaultW4(26px);
+      }
+    }
+  }
+
+  .about {
+    &UsCatch {
+      margin-top: func.toRespPx(40px);
+      @include f.tsukushiARoundGothicB(42px);
+      color: #333;
+      text-align: center;
+      > span {
+        display: inline-block;
+        line-height: 1.15em;
+        background: linear-gradient(transparent 70%, c.$mainThinColor 60%);
       }
     }
   }
