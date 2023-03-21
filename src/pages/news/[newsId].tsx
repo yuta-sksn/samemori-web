@@ -11,6 +11,7 @@ import { convertPeriodSeparateDate } from '@/utils/date'
 import { SiteNews } from '@/features/news/components/SiteNews'
 import { Button } from '@/components/elements/Button/Button'
 import { useRouter } from 'next/router'
+import { SnsShare } from '@/components/elements/SnsShare/SnsShare'
 
 type NewsDetailPageProps = {
   id: string;
@@ -62,10 +63,10 @@ export default function Home({
         </PageSection>
         {/* SNS シェア */}
         <PageSection>
-          <h2 className={styles.indexAboutUsCatch}>鮫町の魅力を活かし、盛り上げる</h2>
-          <p className={styles.indexAboutUsDescription}>
-            勝手に鮫町盛り上げ隊は…テキストテキストテキスト<br />テキストテキスト<br />テキストテキスト、簡単な説明
-          </p>
+          <SnsShare
+            pathname={`/news/${id}`}
+            shareTitle={title}
+          />
         </PageSection>
         {/* お知らせ・イベント一覧 */}
         <PageSection
