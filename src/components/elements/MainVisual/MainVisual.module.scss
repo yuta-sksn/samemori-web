@@ -45,7 +45,7 @@
       display: inline-block;
       position: relative;
       z-index: 5;
-      background:linear-gradient(transparent 70%, c.$mainThinColor 60%);
+      background: linear-gradient(transparent 70%, rgba(c.$accentColor, 0.8) 60%);
       margin-bottom: func.toRespPx(18px);
 
       &:first-of-type {

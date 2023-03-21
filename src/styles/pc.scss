@@ -1,0 +1,67 @@
+@use './functions' as func;
+
+@mixin isPc {
+  &.is-pc {
+    &.fs-32px {
+      font-size: func.toRespPx(32px, 12px) !important;
+      h1, h2, h3, h4, p { font-size: inherit; }
+    }
+
+    &.fs-28px {
+      font-size: func.toRespPx(28px, 12px) !important;
+      h1, h2, h3, h4, p { font-size: inherit; }
+    }
+
+    &.fs-26px {
+      font-size: func.toRespPx(26px, 12px) !important;
+      h1, h2, h3, h4, p { font-size: inherit; }
+    }
+
+    &.fs-24px {
+      font-size: func.toRespPx(24px, 12px) !important;
+      h1, h2, h3, h4, p { font-size: inherit; }
+    }
+
+    &.fs-22px {
+      font-size: func.toRespPx(22px, 12px) !important;
+      h1, h2, h3, h4, p { font-size: inherit; }
+    }
+
+    &.fs-20px {
+      font-size: func.toRespPx(20px, 12px) !important;
+      h1, h2, h3, h4, p { font-size: inherit; }
+    }
+  
+    &.fs-18px {
+      font-size: func.toRespPx(18px, 12px) !important;
+      h1, h2, h3, h4, p { font-size: inherit; }
+    }
+
+    &.fs-16px {
+      font-size: func.toRespPx(16px, 12px) !important;
+      h1, h2, h3, h4, p { font-size: inherit; }
+    }
+
+    &.fs-14px {
+      font-size: func.toRespPx(14px, 12px) !important;
+      h1, h2, h3, h4, p { font-size: inherit; }
+    }
+  
+    &.mb-1em {
+      margin-bottom: 2em;
+      h1, h2, h3, h4, p { margin-bottom: inherit; }
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  @include isPc();
+}
+
+div {
+  @include isPc();
+}

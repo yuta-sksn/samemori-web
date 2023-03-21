@@ -25,11 +25,13 @@
         color: #333;
         @include f.tsukushiARoundGothicB(42px);
         line-height: 1.3em;
-        background: linear-gradient(transparent 70%, c.$mainThinColor 60%);
+        background: linear-gradient(transparent 70%, rgba(c.$accentColor, 0.7) 60%);
       }
 
       &Description {
-        margin-bottom: func.toRespPx(78px);
+        width: func.toRespPx(640px);
+        margin: 0 auto;
+        margin-bottom: func.toRespPx(54px);
         color: #333;
         @include f.defaultW4(26px);
       }
@@ -45,7 +47,7 @@
       > span {
         display: inline-block;
         line-height: 1.15em;
-        background: linear-gradient(transparent 70%, c.$mainThinColor 60%);
+        background: linear-gradient(transparent 70%, rgba(c.$accentColor, 0.7) 60%);
       }
     }
   }

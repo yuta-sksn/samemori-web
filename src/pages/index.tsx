@@ -12,6 +12,7 @@ import { AdobeFontScript } from '@/features/adobefont/components/AdobeFontScript
 import { Card } from '@/components/elements/Card/Card'
 import { SiteNews } from '@/features/news/components/SiteNews'
 import { useRouter } from 'next/router'
+import { useClassName } from '@/utils/component-helper'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -56,8 +57,8 @@ export default function Home() {
         <MainVisual />
         {/*　勝手に鮫町盛り上げ隊について */}
         <PageSection>
-          <h2 className={styles.indexAboutUsCatch}>鮫町の魅力を活かし、盛り上げる</h2>
-          <p className={styles.indexAboutUsDescription}>
+          <h2 className={useClassName(['fs-32px', styles.indexAboutUsCatch])}>鮫町の魅力を活かし、盛り上げる</h2>
+          <p className={useClassName(['fs-18px', 'mb-1em', styles.indexAboutUsDescription])}>
             勝手に鮫町盛り上げ隊は…テキストテキストテキスト<br />テキストテキスト<br />テキストテキスト、簡単な説明
           </p>
           <Button label="もっと詳しく！" onClick={onClickGotoAbout} />

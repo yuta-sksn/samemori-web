@@ -8,7 +8,6 @@
   padding: func.toRespPx(48px) func.toRespPx(64px) func.toRespPx(69px);
   width: 100%;
   background-color: c.$mainColor;
-  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
 
   &ContentsContainer {
     margin: 0 auto;
@@ -110,6 +109,10 @@
       display: block;
       margin: 0 auto;
       @include mixins.toRespSize(400px, 62.25px);
+    }
+
+    &Links {
+      justify-content: center;
     }
   }
 }

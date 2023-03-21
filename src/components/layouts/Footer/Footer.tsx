@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './Footer.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useClassName } from '@/utils/component-helper';
 
 interface FooterProps {}
 
@@ -24,7 +25,7 @@ export const Footer = ({}: FooterProps) => {
           />
         </div>
         {/* リンク */}
-        <div className={classes.footerLinks}>
+        <div className={useClassName(['fs-18px', classes.footerLinks])}>
             {/* 内部・外部リンク */}
             <ul className={classes.footerLinksList}>
               <li><Link href="/about">勝手に鮫町盛り上げ隊について</Link></li>
@@ -73,7 +74,7 @@ export const Footer = ({}: FooterProps) => {
         </div>
       </div>
       {/* Copyright */}
-      <p className={classes.footerCopyright}>©︎ 2023 勝手に鮫町盛り上げ隊</p>
+      <p className={useClassName(['fs-14px', classes.footerCopyright])}>©︎ 2023 勝手に鮫町盛り上げ隊</p>
     </footer>
   );
 };

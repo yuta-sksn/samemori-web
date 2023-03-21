@@ -1,4 +1,5 @@
 @use './colors' as c;
+@import './pc.scss';
 
 ::selection {
   color: #fff;
