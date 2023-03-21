@@ -33,13 +33,13 @@ export const SiteNews = ({
     dataOffset = 0
   }
 
-  // ユーザー別の称号一覧を API から購読
+  // お知らせ・イベント一覧を microCMS から購読
   const { data, error, isLoading } = useSyncSiteNewsList(dataLimit, dataOffset)
   const errorHandling = swrErrorHandlingInComponent(error);
   if (errorHandling !== null && !isErrorModalObj(errorHandling)) return errorHandling;
 
   // ページネーションを表示するか否か
-  let showPagination = noPagination ?? false
+  let showPagination = noPagination || false
   if (data) {
     showPagination = !noPagination && data.totalCount > data.limit
   }
@@ -49,6 +49,7 @@ export const SiteNews = ({
     Math.floor(
       (data?.totalCount as number) / (data?.limit as number)
     ) + ((data?.totalCount as number) % (data?.limit as number) > 0 ? 1 : 0) : 0
+  pageCount = isNaN(pageCount) ? 0 : pageCount
 
   return (
     <>
@@ -56,7 +57,14 @@ export const SiteNews = ({
         {/* お知らせ・イベント一覧 */}
         {(() => {
           if (typeof data?.contents !== 'undefined' && typeof error === 'undefined') {
-            return (<CardList contents={data.contents as Content[]} offset={data.offset} />)
+            return (
+              <CardList
+                contents={data.contents as Content[]}
+                offset={data.offset}
+                style={noPagination || showPagination ? {} : {
+                  paddingBottom: 0,
+                }}
+              />)
           }
         })()}
         {/* ページネーション */}
@@ -84,7 +92,3 @@ export const SiteNews = ({
     </>
   )
 };
-function useState(arg0: number): [any, any] {
-  throw new Error('Function not implemented.');
-}
-
