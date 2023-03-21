@@ -32,10 +32,13 @@
     }
 
     &::after {
+      display: inline-block;
       position: absolute;
       top: func.toRespPx(18px);
-      right: func.toRespPx(50px);
+      right: func.toRespPx(10px);
+      width: func.toRespPx(125px);
       content: attr(data-emoji);
+      text-align: center;
       @include f.tsukushiARoundGothicB(48px);
     }
   }
@@ -99,6 +102,17 @@
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    &Thumbnail {
+      &::after {
+        top: func.toRespPx(24px);
+        @include f.tsukushiARoundGothicB(42px);
+      }
     }
   }
 }
