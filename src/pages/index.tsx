@@ -60,7 +60,7 @@ export default function Home() {
           <p className={styles.indexAboutUsDescription}>
             勝手に鮫町盛り上げ隊は…テキストテキストテキスト<br />テキストテキスト<br />テキストテキスト、簡単な説明
           </p>
-          <Button label="勝手に鮫町盛り上げ隊について" onClick={onClickGotoAbout} />
+          <Button label="もっと詳しく！" onClick={onClickGotoAbout} />
         </PageSection>
         {/* お知らせ・イベント */}
         <PageSection
