@@ -11,3 +11,15 @@ export type Content = {
   category: Category
   description: string
 }
+
+export type ContentResponse = {
+  id: string
+  createdAt: string
+  updatedAt: string
+  publishedAt: string
+  revisedAt: string
+  title: string
+  content: string
+  category: Category
+  description: string
+}

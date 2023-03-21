@@ -24,11 +24,19 @@ export const Card = ({
   isLatest,
   category,
 }: CardProps) => {
+  // サムネイルソース
   const imageSrc = thumbnailUrl ?? '/images/news-noimage.png'
-  const dataEmoji = thumbnailUrl ? '' : (['🦈', '❤️', '💡', '❗️', '✨'])[Math.floor(Math.random() * 5)]
 
+  // サムネイル画像がない場合の絵文字表示 (お遊び)
+  const emojis = ['🦈', '❤️', '💡', '❗️', '✨', '🌊']
+  const emojiSeed = (new Date().getDay() + new Date(publishedAt).getTime() +
+    title.length + description.length) % emojis.length
+  const dataEmoji = thumbnailUrl ? '' : emojis[emojiSeed]
+
+  // 最新のニュースか否か
   const isLatestNews = isLatest ?? false
 
+  // category.id を基にタグを設定
   const categoryId = category?.id ?? 'news'
   let categoryType = 'お知らせ'
   switch (categoryId) {
