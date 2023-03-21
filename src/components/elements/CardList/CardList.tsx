@@ -7,15 +7,18 @@ import classes from './CardList.module.scss';
 interface CardListProps {
   contents: Content[];
   offset: number;
+  style?: React.CSSProperties;
 }
 
 export const CardList = ({
   contents,
   offset,
+  style,
 }: CardListProps) => {
   return (
     <div
       className={classes.cardList}
+      style={style}
     >
       {/* リスト */}
       {contents.map((content: Content, index: number) => {
