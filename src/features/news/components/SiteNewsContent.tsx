@@ -32,7 +32,7 @@ export const SiteNewsContent = ({
 
   return (
     <>
-      <div>
+      <div className={classes.siteNewsContent}>
         {/* お知らせ・イベント詳細 */}
         {(() => {
           if (typeof data !== 'undefined' && typeof error === 'undefined') {

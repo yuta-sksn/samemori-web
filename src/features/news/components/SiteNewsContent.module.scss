@@ -1,0 +1,27 @@
+@use '@/styles/functions' as func;
+@use '@/styles/fonts' as f;
+
+
+.siteNewsContent {
+  width: 100%;
+  max-width: 1024px;
+  padding-top: func.toRespPx(16px);
+  color: #333;
+
+  > h2 {
+    width: 100%;
+    margin: func.toRespPx(24px) 0;
+    @include f.tsukushiARoundGothicB(36px);
+  }
+
+  > p {
+    width: 100%;
+    @include f.defaultW4(26px);
+  }
+
+  > ul {
+    margin: 1em 0;
+    padding-left: 2em;
+    @include f.defaultW4(24px);
+  }
+}
