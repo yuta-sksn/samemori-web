@@ -71,6 +71,7 @@ export default function Home() {
           <SiteNews limit={3} noPagination={true} />
           <Button label="お知らせ・イベント一覧をみる" onClick={onClickGotoNews} />
         </PageSection>
+        {/* イベントカレンダー */}
         <PageSection
           sectionTitle="イベントカレンダー"
           sectionTitleDescription="Events Calendar"
