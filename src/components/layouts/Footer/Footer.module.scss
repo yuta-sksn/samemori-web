@@ -23,7 +23,7 @@
     align-items: center;
     gap: 0;
     margin: func.toRespPx(24px) 0 func.toRespPx(32px);
-    @include f.tsukushiARoundGothicB(24px);
+    @include f.defaultW3(24px);
 
     &List {
       list-style: none;
@@ -49,6 +49,7 @@
     }
 
     &Sns {
+      @include f.defaultW4(24px);
       text-align: center;
 
       > p {

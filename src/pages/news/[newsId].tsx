@@ -80,7 +80,7 @@ export default function Home({
           sectionTitleDescription="News & Events"
         >
           <SiteNews limit={3} noPagination={true} />
-          <Button label="お知らせ・イベント一覧をみる" onClick={onClickGotoNews} />
+          <Button label="お知らせ・イベント一覧" onClick={onClickGotoNews} />
         </PageSection>
       </main>
       <Footer />
