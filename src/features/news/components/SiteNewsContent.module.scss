@@ -23,4 +23,22 @@
     padding-left: 2em;
     @include f.defaultW4(24px);
   }
+
+  &.isPc {
+    > h2 {
+      width: 100%;
+      @include f.tsukushiARoundGothicB(calc(36px * 0.762));
+    }
+  
+    > p {
+      width: 100%;
+      @include f.defaultW4(18px);
+    }
+  
+    > ul {
+      margin: 1em 0;
+      padding-left: 2em;
+      @include f.defaultW4(calc(24px * 0.762));
+    }
+  }
 }

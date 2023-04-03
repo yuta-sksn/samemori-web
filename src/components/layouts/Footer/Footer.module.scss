@@ -8,7 +8,6 @@
   padding: func.toRespPx(48px) func.toRespPx(64px) func.toRespPx(69px);
   width: 100%;
   background-color: c.$mainColor;
-  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
 
   &ContentsContainer {
     margin: 0 auto;
@@ -24,7 +23,7 @@
     align-items: center;
     gap: 0;
     margin: func.toRespPx(24px) 0 func.toRespPx(32px);
-    @include f.tsukushiARoundGothicB(24px);
+    @include f.defaultW3(24px);
 
     &List {
       list-style: none;
@@ -50,6 +49,7 @@
     }
 
     &Sns {
+      @include f.defaultW4(24px);
       text-align: center;
 
       > p {
@@ -85,7 +85,7 @@
     }
 
     a {
-      transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+      transition: opacity .2s cubic-bezier(0.45, 0, 0.55, 1);
       &:hover {
         opacity: 0.75;
       }
@@ -110,6 +110,10 @@
       display: block;
       margin: 0 auto;
       @include mixins.toRespSize(400px, 62.25px);
+    }
+
+    &Links {
+      justify-content: center;
     }
   }
 }
