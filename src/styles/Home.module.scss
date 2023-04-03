@@ -42,6 +42,7 @@
   .about {
     &UsCatch {
       margin-top: func.toRespPx(40px);
+      // margin-bottom: func.toRespPx(40px);
       @include f.tsukushiARoundGothicB(42px);
       color: #333;
       text-align: center;
@@ -50,6 +51,26 @@
         line-height: 1.15em;
         background: linear-gradient(transparent 70%, rgba(c.$accentColor, 0.7) 60%);
       }
+    }
+
+    &Subheading {
+      width: 100%;
+      margin: func.toRespPx(24px) 0;
+      color: #333;
+      @include f.tsukushiARoundGothicB(36px);
+
+      &.isPc {
+        width: 100%;
+        @include f.tsukushiARoundGothicB(calc(36px * 0.762));
+      }
+    }
+
+    &Description {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: func.toRespPx(54px);
+      color: #333;
+      @include f.defaultW4(26px);
     }
   }
 }

@@ -16,8 +16,6 @@ export const Menu = ({
     setIsPc(!isMobile)
   }, [])
 
-  console.log(isPc)
-
   return (
     <div className={classes.menu}>
       <input
