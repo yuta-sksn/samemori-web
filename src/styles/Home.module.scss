@@ -42,7 +42,7 @@
   .about {
     &UsCatch {
       margin-top: func.toRespPx(40px);
-      // margin-bottom: func.toRespPx(40px);
+      margin-bottom: func.toRespPx(40px);
       @include f.tsukushiARoundGothicB(42px);
       color: #333;
       text-align: center;
