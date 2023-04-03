@@ -30,7 +30,7 @@ export const Footer = ({}: FooterProps) => {
             <ul className={classes.footerLinksList}>
               <li><Link href="/about" scroll={false}>勝手に鮫町盛り上げ隊について</Link></li>
               <li><Link href="/news" scroll={false}>お知らせ・イベント</Link></li>
-              <li><a href="">お問い合わせ</a></li> 
+              {/* <li><a href="">お問い合わせ</a></li>  */}
             </ul>
             <hr />
             {/* SNS リンク */}
@@ -39,7 +39,12 @@ export const Footer = ({}: FooterProps) => {
               <ul className={classes.footerLinksSnsList}>
                 {/* FB */}
                 <li>
-                  <a className={classes.footerLinksSnsFb} href="">
+                  <a
+                    className={classes.footerLinksSnsFb}
+                    href="https://www.facebook.com/profile.php?id=100091148126664"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       src="/images/icon-fb.svg"
                       alt="Facebook"
@@ -55,7 +60,12 @@ export const Footer = ({}: FooterProps) => {
                 </li>
                 {/* Instagram */}
                 <li>
-                  <a className={classes.footerLinksSnsInsta} href="">
+                  <a
+                    className={classes.footerLinksSnsInsta}
+                    href="https://www.instagram.com/katteni_samemori/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       src="/images/icon-instagram.svg"
                       alt="Instagram"

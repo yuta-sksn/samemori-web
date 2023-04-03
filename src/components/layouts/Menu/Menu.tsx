@@ -29,13 +29,18 @@ export const Menu = ({
         <ul className={classes.menuContentList}>
           <li><Link href="/about" scroll={false}>勝手に鮫町盛り上げ隊について</Link></li>
           <li><Link href="/news" scroll={false}>お知らせ・イベント</Link></li>
-          <li><a href="">お問い合わせ</a></li>
+          {/* <li><a href="">お問い合わせ</a></li> */}
           <hr />
           <li className={classes.menuContentSns}>SNS</li>
           <ul className={classes.menuContentListSnsList}>
             {/* FB */}
             <li>
-              <a className={classes.menuContentListSnsFb} href="">
+              <a
+                className={classes.menuContentListSnsFb}
+                href="https://www.facebook.com/profile.php?id=100091148126664"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/images/icon-fb.svg"
                   alt="Facebook"
@@ -51,7 +56,12 @@ export const Menu = ({
             </li>
             {/* Instagram */}
             <li>
-              <a className={classes.menuContentListSnsInsta} href="">
+              <a
+                className={classes.menuContentListSnsInsta}
+                href="https://www.instagram.com/katteni_samemori/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/images/icon-instagram.svg"
                   alt="Instagram"
