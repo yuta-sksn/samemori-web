@@ -19,10 +19,11 @@
   }
 
   &.white {
-    background-color: white;
+    background: #F5F6F8;
   }
 
   &.aliceblue {
-    background-color: #f0f9fe;
+    background: #f0f9fe;
+    // background: linear-gradient(-232.61deg, #fff 14.73%, rgba(240,249,254,1) 85.28%);
   }
 }

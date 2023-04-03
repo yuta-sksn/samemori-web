@@ -17,4 +17,9 @@
     background-color: c.$mainColor;
     color: white;
   }
+
+  &.isPc {
+    @include mixins.toRespSize(calc(520px * 0.762), calc(96px * 0.762));
+    @include f.tsukushiARoundGothicB(calc(28px * 0.762));
+  }
 }

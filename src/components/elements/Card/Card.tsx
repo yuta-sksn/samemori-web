@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Category } from '@/features/news/types/category';
 import { convertPeriodSeparateDate } from '@/utils/date';
 import Link from 'next/link';
+import { useClassName } from '@/utils/component-helper';
 
 interface CardProps {
   id: string;
@@ -49,7 +50,7 @@ export const Card = ({
   }
 
   return (
-    <Link className={classes.card} href={`/news/${id}`}>
+    <Link className={classes.card} href={`/news/${id}`} scroll={false}>
       <div className={classes.cardThumbnail} data-emoji={dataEmoji}>
         <Image
           src={imageSrc}
@@ -74,7 +75,7 @@ export const Card = ({
           <span className={[classes.cardTitleBeforeType, classes[categoryId]].join(' ')}>{categoryType}</span>
         </p>
         <h3 className={classes.cardTitle}>{title}</h3>
-        <p className={classes.cardDescription}>{description}</p>
+        <p className={useClassName(['fs-18px', classes.cardDescription])}>{description}</p>
       </div>
     </Link>
   );

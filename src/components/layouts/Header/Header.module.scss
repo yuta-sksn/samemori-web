@@ -12,6 +12,8 @@
   padding: func.toRespPx(24px);
   width: 100%;
   &Logo {
+    position: inherit;
+    z-index: inherit;
     @include mixins.toRespSize(400px, 62.25px);
   }
 
